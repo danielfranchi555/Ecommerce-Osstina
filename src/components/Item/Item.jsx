@@ -1,5 +1,4 @@
 import {  Image, Stack,  Text} from '@chakra-ui/react'
-import Fade from 'react-reveal/Fade'
 import React from 'react'
 
 const Item = ({item}) => {
