@@ -1,0 +1,36 @@
+.main{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-areas: 
+    "nav nav"
+    "categories products"
+    "categories products"
+     ;
+} 
+
+.categories{
+    grid-area: categories;
+}
+
+.products {
+    grid-area: products;
+
+}
+
+.nav{
+    grid-area: nav;
+}
+
+@media screen and (max-width:800px) {
+    .main{
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "nav"         
+                              "products"  ;
+    } 
+    .categories{display: none;}
+}
