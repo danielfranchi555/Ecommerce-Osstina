@@ -7,8 +7,10 @@
     "nav nav"
     "categories products"
     "categories products"
-     ;
+     ;     
 } 
+
+
 
 .categories{
     grid-area: categories;
@@ -22,6 +24,14 @@
 .nav{
     grid-area: nav;
 }
+.subNav{
+    grid-area: subNav;
+}
+
+@media screen and (min-width:800px) {
+    .subNav{display: none;}
+}
+
 
 @media screen and (max-width:800px) {
     .main{
@@ -29,7 +39,7 @@
         width: auto;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-areas: "nav"         
+        grid-template-areas: "subNav"         
                               "products"  ;
     } 
     .categories{display: none;}
