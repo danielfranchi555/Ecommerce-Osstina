@@ -6,7 +6,7 @@ const ItemList = ({products}) => {
   return (
        <SimpleGrid    minChildWidth={{base:'150px',md:'210px'}}>
             {products.map((item)=>(
-               <Item item={item}></Item>
+               <Item key={item.id} item={item}></Item>
             ))}
           </SimpleGrid>
    

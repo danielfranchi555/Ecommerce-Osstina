@@ -15,7 +15,7 @@ const NavBar = () => {
       <Input w={{base:'100px',md:'150px'}} placeholder='buscar'/>
       </Stack>
       <Link to={'/'}>
-      <Text textAlign='center' flex={1} fontSize='40px'  >Osstina</Text>
+      <Text  flex={1} fontSize='40px'  >Osstina</Text>
       </Link>
      <Stack   align='flex-end' flex={1}>
       <img src={carrito} style={{width:'30px'}} alt="" />

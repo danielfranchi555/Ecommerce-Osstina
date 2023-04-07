@@ -1,15 +1,19 @@
 import {  Box, Center, Image, Stack,  Text} from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = ({item}) => {
 
   
   return (
 
-    
-       <Stack   justify='center'  p={1} align='center'  w='auto'> 
+   
+
+      <Stack   justify='center'  p={1} align='center'  w='auto'> 
          <Stack w={{base:'auto'}}  align='center'  >
+          <Link to={`/detail/${item.id}`}>
          <Image src={item.image} h={{base:'200px',md:'auto'}} maxW={{base:'auto',md:'190px'}} alt="" />
+          </Link>
           <Box  fontSize={{base:'13px'}}>
             {item.title}
           </Box>
@@ -19,6 +23,8 @@ const Item = ({item}) => {
          </Stack>
              
               </Stack>
+ 
+     
   
               
  
