@@ -19,18 +19,19 @@ export const ItemDetail = ({ product}) => {
 
   return (
     <Container maxW='container.lg'>
-           <Stack  justify="center" align="center">
+           <Stack mt='50px' justify="center" align="center">
       <Stack direction={['column', 'row']}>
         <Stack   flex={6}>
-          
-          <img src={imageCarousel} alt="" />
+          <Image
+           boxSize={{base:'auto',md:'400px'}}
+          src={imageCarousel} alt="" />
           
           <Stack   direction='row'>
              {product.carousel? product.carousel.map((item)=>(
                 <Stack key={item} >
             <Image         
             onClick={()=>setimageCarousel(item)}
-            boxSize={{base:'70px',md:'400px'}}
+            boxSize={{base:'auto',md:'70px'}}
             objectFit="cover"
             src={item}
             

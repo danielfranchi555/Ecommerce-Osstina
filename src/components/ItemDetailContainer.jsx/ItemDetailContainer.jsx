@@ -3,6 +3,8 @@ import {db} from '../../firebase'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { doc, getDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
+import { Center } from '@chakra-ui/react'
+import { DotWave } from '@uiball/loaders'
 
 
 
@@ -24,13 +26,22 @@ export const ItemDetailContainer = () => {
       },[])
       
       
-      if(loading){
-        return <p>loading</p>
-      }
+    
 
   return (
     <>
+    {loading?
+    
+  <Center mt='200px'>
+       <DotWave
+  size={47}
+  speed={1} 
+  color="black" 
+ />
+  </Center>:
+
         <ItemDetail product={product} />
+}
     </>
   )
 }
