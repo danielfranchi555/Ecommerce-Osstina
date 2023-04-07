@@ -30,6 +30,7 @@
 
 @media screen and (min-width:800px) {
     .subNav{display: none;}
+  
 }
 
 
@@ -39,8 +40,11 @@
         width: auto;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-areas: "subNav"         
-                              "products"  ;
+        grid-template-areas:"subNav"         
+                            "products"  ;   
+            .categories{display: none;}
+    .nav{display: none;}                    
     } 
-    .categories{display: none;}
+   
 }
+

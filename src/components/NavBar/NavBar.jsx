@@ -1,5 +1,6 @@
 import { Box,  Container,  Grid,  Input,  Stack, Text} from '@chakra-ui/react';
 import carrito from '../../img/carrito.png'
+import { Link } from 'react-router-dom';
 const NavBar = () => {
    
 
@@ -13,7 +14,9 @@ const NavBar = () => {
      <Stack h='auto'  flex={1}>
       <Input w={{base:'100px',md:'150px'}} placeholder='buscar'/>
       </Stack>
+      <Link to={'/'}>
       <Text textAlign='center' flex={1} fontSize='40px'  >Osstina</Text>
+      </Link>
      <Stack   align='flex-end' flex={1}>
       <img src={carrito} style={{width:'30px'}} alt="" />
       </Stack>
