@@ -23,22 +23,18 @@ export const ItemDetail = ({ product}) => {
       <Stack direction={['column', 'row']}>
         <Stack   flex={6}>
           <Image
-           boxSize={{base:'auto',md:'400px'}}
-          src={imageCarousel} alt="" />
-          
+          boxSize={{base:'auto',md:'400px'}}
+          src={imageCarousel} alt="" /> 
           <Stack   direction='row'>
              {product.carousel? product.carousel.map((item)=>(
-                <Stack key={item} >
+        <Stack key={item} >
             <Image         
             onClick={()=>setimageCarousel(item)}
             boxSize={{base:'auto',md:'70px'}}
             objectFit="cover"
             src={item}
-            
           />
-               
                 </Stack>
-           
             ))
             :
             null
