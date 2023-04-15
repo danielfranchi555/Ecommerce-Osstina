@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Categories = () => {
   return (
-    <Container border='solid green'   >
+    <Container   >
         <Stack spacing={0} >      
        <Text  fontSize='auto' fontWeight='700'> Categories</Text>
         <Stack  direction={['row','row','column']} >

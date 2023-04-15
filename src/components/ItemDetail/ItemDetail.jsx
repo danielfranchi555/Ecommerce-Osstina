@@ -23,6 +23,7 @@ export const ItemDetail = ({ product}) => {
       <Stack direction={['column', 'row']}>
         <Stack   flex={6}>
           <Image
+          objectFit='cover'
           boxSize={{base:'auto',md:'400px'}}
           src={imageCarousel} alt="" /> 
           <Stack   direction='row'>

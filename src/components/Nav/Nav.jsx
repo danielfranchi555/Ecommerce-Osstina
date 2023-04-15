@@ -3,7 +3,7 @@ import React from 'react'
 
 const Nav = () => {
   return ( 
-    <Container border='solid black' maxW='container.xxl'>
+    <Container maxW='container.xxl'>
           <Stack   align='center' w='100%' h='60px' direction='row' justifyContent='space-between' >
             <Box>
             <Text>
