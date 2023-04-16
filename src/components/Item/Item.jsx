@@ -18,8 +18,10 @@ const Item = ({ item }) => {
       <Stack spacing={2} w={{ base: "auto" }} align="center">
         <Link to={`/detail/${item.id}`}>
           <Image
-        boxShadow='dark-xs' p='0' rounded='md' bg='white'
-
+            boxShadow="dark-xs"
+            p="0"
+            rounded="md"
+            bg="white"
             src={item.image}
             objectFit="cover"
             h={{ base: "200px", md: "auto" }}
@@ -30,7 +32,9 @@ const Item = ({ item }) => {
         <Box fontSize={{ base: "13px" }}>{item.title}</Box>
         <Box fontWeight="800">${item.price}</Box>
         <Stack>
-        <Badge fontSize='0.8em'  colorScheme={SinStock?'red':'green'}>{item.stock}</Badge>
+          <Badge fontSize="0.8em" colorScheme={SinStock ? "red" : "green"}>
+            {item.stock}
+          </Badge>
         </Stack>
       </Stack>
     </Stack>

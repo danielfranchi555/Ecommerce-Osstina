@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export const SubNav = () => {
   return (
-    <Stack h='50px' bg='#dfd3c3' w='100%' >
+    <Stack h='50px' bg='#3e4a61' color='white' w='100%' >
     <Container mt='5px' maxWidth='container'  >
           <Stack direction='row' alignItems='center'   justify='space-around'>
             <Box> 
@@ -19,23 +19,25 @@ export const SubNav = () => {
     transition='all 0.2s'
     borderRadius='md'
     borderWidth='1px'
-    _hover={{ bg: 'gray.400' }}
-    _expanded={{ bg: 'blue.400' }}
+    _expanded={{ bg: '#3e4a61' }}
   >
     Categorias <ChevronDownIcon />
   </MenuButton>
-  <MenuList>
+  <MenuList bg='#3e4a61'>
+  <Link to={`/`}>
+    <MenuItem bg='#3e4a61'>Todo</MenuItem>
+    </Link>
     <Link to={`/categorie/${'remera'}`}>
-    <MenuItem>Remeras</MenuItem>
+    <MenuItem bg='#3e4a61'>Remeras</MenuItem>
     </Link>
     <Link to={`/categorie/${'buzo'}`}>
-    <MenuItem>Buzos</MenuItem>
+    <MenuItem bg='#3e4a61'>Buzos</MenuItem>
     </Link>
     <Link to={`/categorie/${'pantalon'}`}>
-    <MenuItem>Pantalones</MenuItem>
+    <MenuItem bg='#3e4a61'>Pantalones</MenuItem>
     </Link>
     <Link to={`/categorie/${'campera'}`}>
-    <MenuItem>Camperas</MenuItem>
+    <MenuItem bg='#3e4a61'>Camperas</MenuItem>
     </Link>
   </MenuList>
 </Menu>
