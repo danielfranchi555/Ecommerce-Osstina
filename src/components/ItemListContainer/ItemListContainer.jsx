@@ -60,7 +60,7 @@ const ItemListContainer = () => {
           <section className="nav">
             <Nav />
           </section>
-          <section  className="subNav">
+          <section className="subNav">
             <SubNav />
           </section>
 

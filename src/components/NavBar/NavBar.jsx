@@ -31,7 +31,7 @@ const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
-  const { cart, setCart } = UsarContexto();
+  const { cart, setCart, totalCart } = UsarContexto();
 
   const deleteProd = (id) => {
     setCart(cart.filter((prod) => prod.id != id));
@@ -41,22 +41,32 @@ const NavBar = () => {
   return (
     <>
       <Stack bg=" #f9f9f9">
-        <Container  maxWidth="container.xl">
-          <Stack  h="auto" direction="row" justify='space-between' alignItems="center">
-           
-            <Stack textAlign="center"  fontSize="45px">
+        <Container maxWidth="container.xl">
+          <Stack
+            h="auto"
+            direction="row"
+            justify="space-between"
+            alignItems="center"
+          >
+            <Stack textAlign="center" fontSize="45px">
               <Link to={"/"}>Osstina</Link>
             </Stack>
 
             <Stack>
-              <Stack  align="center" direction="row">
+              <Stack align="center" direction="row">
                 {cart.length === 0 ? null : (
-                  <Badge px={3} borderRadius={10} fontSize="1.2em" colorScheme="purple">
+                  <Badge
+                    px={3}
+                    borderRadius={10}
+                    fontSize="1.2em"
+                    colorScheme="green"
+                  >
                     <Center fontWeight="800">{cart.length}</Center>
                   </Badge>
                 )}
 
                 <Image
+                  cursor="pointer"
                   onClick={onOpen}
                   src={carrito}
                   style={{ width: "30px" }}
@@ -113,6 +123,9 @@ const NavBar = () => {
                     </DrawerBody>
 
                     <DrawerFooter>
+                      <Center fontWeight="800" mr={3}>
+                        Total: ${totalCart()}
+                      </Center>
                       <Button variant="outline" mr={3} onClick={onClose}>
                         Cancel
                       </Button>

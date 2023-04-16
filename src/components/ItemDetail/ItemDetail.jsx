@@ -39,9 +39,9 @@ export const ItemDetail = ({ product }) => {
                 : null}
             </Stack>
           </Stack>
-          <Stack >
+          <Stack   w={{base:'100%',md:'50%'}}  >
             <Center  fontSize="20px">{product.title}</Center>
-            <Stack align='center' justify='center' direction='row'>
+            <Stack align='center'  justify='center' direction='row'>
               <Center flex={1} fontSize="20px" fontWeight='800' >Precio: ${product.price}</Center>
             <Button flex={1} size='md' variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button> 
             </Stack>
