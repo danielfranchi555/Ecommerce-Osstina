@@ -23,8 +23,9 @@ import {
   Tr,
   useDisclosure,
 } from "@chakra-ui/react";
+import ReactWhatsapp from 'react-whatsapp';
 import carrito from "../../img/carrito.png";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { UsarContexto } from "../Context/Context";
 import { Link } from "react-router-dom";
 const NavBar = () => {
@@ -38,6 +39,10 @@ const NavBar = () => {
     console.log(id);
   };
 
+  const text = cart.reduce((mess, prod) => mess.concat(`Producto: ${prod.title}\n`),"");
+  const PagoTerminado = text.concat(`Precio Total :$${totalCart()}`);
+
+  console.log(PagoTerminado)
   return (
     <>
       <Stack bg=" #f9f9f9">
@@ -123,13 +128,14 @@ const NavBar = () => {
                     </DrawerBody>
 
                     <DrawerFooter>
-                      <Center fontWeight="800" mr={3}>
+                      <Center fontWeight="900" mr={3}>
                         Total: ${totalCart()}
                       </Center>
                       <Button variant="outline" mr={3} onClick={onClose}>
                         Cancel
                       </Button>
-                      <Button colorScheme="blue">Realizar Pedido</Button>
+
+                      <ReactWhatsapp number="351-200-2606" message={'Hola quiero realizar este pedido:\n'+ ' ' +PagoTerminado}> <Button colorScheme="green" variant='outline'>Confirmar Pedido</Button> </ReactWhatsapp>
                     </DrawerFooter>
                   </>
                 )}

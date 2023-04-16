@@ -8,6 +8,9 @@ export const ItemDetail = ({ product }) => {
   const [imageCarousel, setimageCarousel] = useState(fuckingImage);
    
   const {addToCart} = UsarContexto()
+  
+
+
 
   return (
     <Container  h="auto" w="100%" maxW="container.lg">
