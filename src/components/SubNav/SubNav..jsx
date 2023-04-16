@@ -9,7 +9,7 @@ export const SubNav = () => {
     <Container mt='5px' maxWidth='container'  >
           <Stack direction='row' alignItems='center'   justify='space-around'>
             <Box> 
-          Inicio/Productos
+          Inicio/ <span style={{fontWeight:'800'}}>Productos</span>
             </Box>
  <Stack align='flex-end' flex={1}>
  <Menu>
