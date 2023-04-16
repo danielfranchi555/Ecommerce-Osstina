@@ -41,17 +41,15 @@ const NavBar = () => {
   return (
     <>
       <Stack bg=" #f9f9f9">
-        <Container maxWidth="container.xl">
-          <Stack h="70px" direction="row" alignItems="center">
-            <Stack h="auto" flex={1}>
-              <Input w={{ base: "100px", md: "100px" }} placeholder="buscar" />
-            </Stack>
-            <Text textAlign="center" flex={1} fontSize="45px">
+        <Container  maxWidth="container.xl">
+          <Stack  h="auto" direction="row" justify='space-between' alignItems="center">
+           
+            <Stack textAlign="center"  fontSize="45px">
               <Link to={"/"}>Osstina</Link>
-            </Text>
+            </Stack>
 
-            <Stack align={{ base: "center", md: "flex-end" }} flex={1}>
-              <Stack justify="center" align="center" direction="row">
+            <Stack>
+              <Stack  align="center" direction="row">
                 {cart.length === 0 ? null : (
                   <Badge px={3} borderRadius={10} fontSize="1.2em" colorScheme="purple">
                     <Center fontWeight="800">{cart.length}</Center>

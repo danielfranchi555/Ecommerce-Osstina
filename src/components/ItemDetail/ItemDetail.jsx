@@ -1,4 +1,4 @@
-import { Button, Container, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, Center, Container, Image, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { UsarContexto } from "../Context/Context";
 
@@ -11,9 +11,9 @@ export const ItemDetail = ({ product }) => {
 
   return (
     <Container  h="auto" w="100%" maxW="container.lg">
-      <Stack mt="20px" justify="center" align="center">
-        <Stack  w={{ base: "auto", md: "700px" }} direction={["column", "row"]}>
-          <Stack direction={["column", "column"]} flex={7}>
+      <Stack  mt="20px" justify="center" align="center">
+        <Stack spacing={0}  w={{ base: "auto", md: "700px" }} direction={["column", "row"]}>
+          <Stack direction={["column", "column"]}>
             <Image
              boxShadow='lg' rounded='lg' 
               boxSize={{ base: "100%", md: "350px" }}
@@ -39,12 +39,13 @@ export const ItemDetail = ({ product }) => {
                 : null}
             </Stack>
           </Stack>
-          <Stack>
-            <Stack spacing={0} >
-            <Text fontSize="30px">{product.title}</Text>
-            <Text fontSize="20px" >${product.price}</Text>
+          <Stack >
+            <Center  fontSize="20px">{product.title}</Center>
+            <Stack align='center' justify='center' direction='row'>
+              <Center flex={1} fontSize="20px" fontWeight='800' >Precio: ${product.price}</Center>
+            <Button flex={1} size='md' variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button> 
             </Stack>
-            <Button  variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button>
+        
           </Stack>
         </Stack>
       </Stack>
