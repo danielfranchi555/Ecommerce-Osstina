@@ -16,7 +16,7 @@ export const ItemDetail = ({ product }) => {
           <Stack direction={["column", "column"]}>
             <Image
              boxShadow='lg' rounded='lg' 
-              boxSize={{ base: "100%", md: "350px" }}
+              boxSize={{ base: "400px", md: "350px" }}
               objectFit="cover"
               src={imageCarousel}
               alt="Dan Abramov"
