@@ -12,11 +12,11 @@ export const ItemDetail = ({ product }) => {
   return (
     <Container  h="auto" w="100%" maxW="container.lg">
       <Stack mt="20px" justify="center" align="center">
-        <Stack w={{ base: "auto", md: "700px" }} direction={["column", "row"]}>
+        <Stack  w={{ base: "auto", md: "700px" }} direction={["column", "row"]}>
           <Stack direction={["column", "column"]} flex={7}>
             <Image
              boxShadow='lg' rounded='lg' 
-              boxSize={{ base: "100%", md: "500px" }}
+              boxSize={{ base: "100%", md: "350px" }}
               objectFit="cover"
               src={imageCarousel}
               alt="Dan Abramov"
@@ -24,7 +24,7 @@ export const ItemDetail = ({ product }) => {
             <Stack direction="row">
               {product.carousel
                 ? product.carousel.map((item) => (
-                    <Stack w="100%" key={item}>
+                    <Stack w={{base:"100%",md:'auto'}} key={item}>
                       <Image
                         borderRadius="lg"
                         cursor="pointer"
@@ -39,10 +39,12 @@ export const ItemDetail = ({ product }) => {
                 : null}
             </Stack>
           </Stack>
-          <Stack spacing={3} flex={4}>
+          <Stack>
+            <Stack spacing={0} >
             <Text fontSize="30px">{product.title}</Text>
-            <Text fontSize="20px">${product.price}</Text>
-            <Button  w='150px' variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button>
+            <Text fontSize="20px" >${product.price}</Text>
+            </Stack>
+            <Button  variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button>
           </Stack>
         </Stack>
       </Stack>
