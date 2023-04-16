@@ -19,7 +19,6 @@ export const ItemDetailContainer = () => {
         setProduct({id:prod.id , ... prod.data()})
        setLoading(false)
       }
-      console.log(product)
 
       useEffect(()=>{
       getProduct()

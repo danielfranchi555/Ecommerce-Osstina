@@ -1,12 +1,13 @@
-import { Container, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, Container, Image, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { UsarContexto } from "../Context/Context";
 
 export const ItemDetail = ({ product }) => {
   const fuckingImage = product.image ? product.image : "no";
 
   const [imageCarousel, setimageCarousel] = useState(fuckingImage);
-
-  console.log(fuckingImage);
+   
+  const {addToCart} = UsarContexto()
 
   return (
     <Container  h="auto" w="100%" maxW="container.lg">
@@ -38,9 +39,10 @@ export const ItemDetail = ({ product }) => {
                 : null}
             </Stack>
           </Stack>
-          <Stack spacing={0} flex={6}>
+          <Stack spacing={3} flex={4}>
             <Text fontSize="30px">{product.title}</Text>
             <Text fontSize="20px">${product.price}</Text>
+            <Button  w='150px' variant='outline' colorScheme="green" onClick={()=>addToCart(product)}>Añadir</Button>
           </Stack>
         </Stack>
       </Stack>
